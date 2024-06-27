@@ -8,6 +8,9 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import NoMatch from "./pages/NoMatch";
 import DragDrop from "./pages/projects/DragDrop";
+import LearnUseRef from "./pages/practiceTopics/LearnUseRef";
+import learnUseMemo from "./pages/practiceTopics/learnUseMemo";
+import LearnUseMemo from "./pages/practiceTopics/learnUseMemo";
 
 function App() {
   return (
@@ -20,8 +23,9 @@ function App() {
           <Route path="" element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="projects/dragdrop" element={<DragDrop />} />
+          <Route path="practicetopics/LearnUseRef" element={<LearnUseRef />} />
+          <Route path="practicetopics/learnUseMemo" element={<LearnUseMemo />} />
 
-        
           <Route path="*" element={<NoMatch />} />
         </Route>
       </Routes>

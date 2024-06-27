@@ -1,14 +1,39 @@
 /* navbar.css */
+.logomain {
+  border: 2px solid #484848; /* Dark gray border */
+  padding: 4px 10px; /* Increased padding for better spacing */
+  border-radius: 12px;
+  color: #007bff; /* Blue text */
+  background-color: #b9d8f8; /* Light blue background */
+  font-weight: bold; /* Ensure text is bold */
+}
+
+/* Black theme */
+body.dark-theme {
+  background-color: #333; /* Dark background */
+  color: #fff; /* Light text */
+}
+
+/* Hover effect */
+.logomain:hover {
+  background-color: #007bff; /* Blue background on hover */
+  color: #fff; /* White text on hover */
+  border-color: #007bff; /* Blue border on hover */
+  cursor: pointer;
+}
+
 
 .custom-navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #222; /* Dark black background */
+  background-color: #000000; /* Dark black background */
   color: #fff;
   padding: 10px 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-bottom: 1px solid rgb(70, 70, 70);
+  margin-bottom: 10px;
 }
 
 .custom-navbar-logo {
@@ -46,16 +71,17 @@
 .dropdown-menu {
   display: none;
   position: absolute;
-  background-color: #333;
+  background-color: #000000;
   z-index: 1;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   min-width: 200px;
-  border-radius: 4px;
+  border-radius: 17px;
   margin-top: 8px;
   overflow: hidden;
   opacity: 0;
   transform: translateY(-10px);
   transition: opacity 0.3s, transform 0.3s;
+  border: 1px solid rgb(46, 46, 46);
 }
 
 .dropdown-menu li {

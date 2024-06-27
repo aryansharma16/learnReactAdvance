@@ -36,6 +36,21 @@ const MainNavbar = () => {
             </ul>
           )}
         </li>
+        <li
+          className="dropdown"
+          onMouseEnter={toggleDropdown}
+          onMouseLeave={toggleDropdown}
+        >
+          <Link to="/projects">Topics</Link>
+          {isDropdownOpen && (
+            <ul className="dropdown-menu">
+              <li><Link to="/practicetopics/LearnUseRef">UseRefs</Link></li>
+              <li><Link to="/practicetopics/learnUseMemo">UseMemo</Link></li>
+              <li><Link to="/practicetopics/link3">Link 3</Link></li>
+              <li><Link to="/practicetopics/link4">Link 4</Link></li>
+            </ul>
+          )}
+        </li>
         <li>
           <Link to="/nothing-here">Nothing Here</Link>
         </li>

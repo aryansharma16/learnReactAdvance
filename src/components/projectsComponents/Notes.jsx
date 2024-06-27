@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { createRef, useEffect, useRef } from "react";
 import Note from "./Note";
 
 const Notes = ({ notes = [], setNotes = () => {} }) => {
@@ -29,15 +29,26 @@ const Notes = ({ notes = [], setNotes = () => {} }) => {
       y: Math.floor(Math.random() * maxY), // random value for the y position
     };
   };
+
+  const handleDragStart = (id, e) => {
+    const noteRef = noteRefs.current[id].current;
+    const rect = noteRef.getBoundingClientRect();
+    console.log(rect, "rect");
+  };
   return (
     <div>
       {notes.map((note) => {
         return (
           <Note
-            ref={noteRefs.current[note.id]}
+            ref={
+              noteRefs.current[note.id]
+                ? noteRefs.current[note.id]
+                : (noteRefs.current[note.id] = createRef())
+            }
             initialPos={note.position}
             key={note.id}
             content={note.text}
+            onMouseDown={(e) => handleDragStart(note, e)}
           />
         );
       })}

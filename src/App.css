@@ -2,4 +2,29 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  background-color: black;
+  color: white;
+}
+
+.input-field {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.name-display {
+  font-size: 18px;
+  font-weight: bold;
+  color: #d7d7d7;
+  margin-top: 10px;
+}
+.topicsUseRef{
+  margin: 8px;
+
+}
+
+div{
+  color: white !important;
 }

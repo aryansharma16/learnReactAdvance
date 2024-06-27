@@ -1,8 +1,9 @@
-import React from "react";
+import { forwardRef } from "react";
 
-const Note = ({ content, initialPos, ...props }) => {
+const Note = forwardRef(({ content, initialPos, ...props }, ref) => {
   return (
     <div
+      ref={ref}
       style={{
         position: "absolute",
         left: `${initialPos?.x}px`,
@@ -19,6 +20,6 @@ const Note = ({ content, initialPos, ...props }) => {
       📌 {content}
     </div>
   );
-};
+});
 
 export default Note;
