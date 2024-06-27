@@ -3,10 +3,15 @@ import { Link } from 'react-router-dom';
 import './navbar.css'; // Make sure to create this CSS file
 
 const MainNavbar = () => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isProjectsDropdownOpen, setIsProjectsDropdownOpen] = useState(false);
+  const [isTopicsDropdownOpen, setIsTopicsDropdownOpen] = useState(false);
 
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
+  const toggleProjectsDropdown = () => {
+    setIsProjectsDropdownOpen(!isProjectsDropdownOpen);
+  };
+
+  const toggleTopicsDropdown = () => {
+    setIsTopicsDropdownOpen(!isTopicsDropdownOpen);
   };
 
   return (
@@ -23,11 +28,11 @@ const MainNavbar = () => {
         </li>
         <li
           className="dropdown"
-          onMouseEnter={toggleDropdown}
-          onMouseLeave={toggleDropdown}
+          onMouseEnter={toggleProjectsDropdown}
+          onMouseLeave={toggleProjectsDropdown}
         >
-          <Link to="/projects">projects</Link>
-          {isDropdownOpen && (
+          <Link to="/projects">Projects</Link>
+          {isProjectsDropdownOpen && (
             <ul className="dropdown-menu">
               <li><Link to="/projects/dragdrop">Drag Drop</Link></li>
               <li><Link to="/projects/link2">Link 2</Link></li>
@@ -38,11 +43,11 @@ const MainNavbar = () => {
         </li>
         <li
           className="dropdown"
-          onMouseEnter={toggleDropdown}
-          onMouseLeave={toggleDropdown}
+          onMouseEnter={toggleTopicsDropdown}
+          onMouseLeave={toggleTopicsDropdown}
         >
-          <Link to="/projects">Topics</Link>
-          {isDropdownOpen && (
+          <Link to="/practicetopics">Topics</Link>
+          {isTopicsDropdownOpen && (
             <ul className="dropdown-menu">
               <li><Link to="/practicetopics/LearnUseRef">UseRefs</Link></li>
               <li><Link to="/practicetopics/learnUseMemo">UseMemo</Link></li>
